@@ -1,4 +1,4 @@
-#!/bin/ksh
+#!/bin/bash
 #Shell Script de compilacion de listarec
 ACTUAL=$PWD
 cd ../../bin 

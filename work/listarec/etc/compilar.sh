@@ -1,4 +1,4 @@
-#!/usr/bin/ksh
+#!/usr/bin/bash
 cd ../fuente
 ACTUAL=$PWD
 cd $ACTUAL/lib

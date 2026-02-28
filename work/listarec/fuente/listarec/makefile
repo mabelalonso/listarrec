@@ -1,13 +1,12 @@
 # %W%
 COMPILADOR=gcc
-FUENTE = procesaarchivo.c stub.c
+FUENTE = procesaarchivo.c stub.c tipo_archivo.c
 OBJS=$(FUENTE:.c=.o)
-HEADER=listarrec.h 
 PROG= $(RUTA_BIN)listarrec
 
-CC: $(OBJS) 
+CC: $(OBJS)
 	$(COMPILADOR) $(OBJS) -lm -o $(PROG)
-	@- echo "Compilación terminada"
+	@- echo "CompilaciÃ³n terminada"
 
 LIMPIA:
 	@- rm -f $(OBJS)
@@ -17,8 +16,7 @@ BORRA:
 	@- rm -f $(OBJS) $(PROG)
 	@- echo "Borrado de archivos terminado"
 
-.c.o: 
+.c.o:
 	$(COMPILADOR) -c -I$(RUTA_INCL) $*.c -o $*.o
 
-$(OBJS): $(RUTA_INCL)$(HEADER) 
-
+$(OBJS): $(RUTA_INCL)listarrec.h $(RUTA_INCL)tipo_archivo.h
